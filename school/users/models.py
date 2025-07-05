@@ -14,7 +14,7 @@ def renomer_imager(instance, filename):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=150, blank=True)
-    photo_profile = models.ImageField(upload_to=renomer_imager)
+    photo_profile = models.ImageField(upload_to=renomer_imager, blank=True)
 
     etudiant = 'etudiant'
     enseignant = 'enseignant'

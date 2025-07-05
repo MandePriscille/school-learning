@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+ {% block css %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% if registered %}
+        <h2> vous etez deja enregistre </h2>
+        {% endif %}
+        <div class="col-md-12">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form1.as_p}}
+                {{form2.as_p}}
+            <input type="submit" class="btn-primary" value="enregistre">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+
+{% endblock %}
