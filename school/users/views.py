@@ -66,9 +66,9 @@ def user_login(request):
             login(request, user)
             return HttpResponseRedirect('/')
          else:
-            HttpResponse("L'utilisateur est desactive")
+            return HttpResponse("L'utilisateur est desactive")
       else:
-         HttpResponse("Soit votre nom ou votre mot de passe est incorrect")
+         return HttpResponse("Soit votre nom ou votre mot de passe est incorrect")
 
    else:
       return render(request, "auth/login.html")

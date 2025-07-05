@@ -23,12 +23,14 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li><a class="dropdown-item" href="{% url 'register' %}">s'enregistre</li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">s'enregistre</a></li>
         {% if user.is_authenticated %}
-        <li><a class="dropdown-item" href="{% url 'logout' %}">se deconnecter</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">se deconnecter</a></li>
+         <li class="nav-item"><a class="nav-link" href="#">{{request.user.username}} </a></li>
         {% else %}
-            <li><a class="dropdown-item" href="{% url 'login' %}">se connecter</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">se connecter</a></li>
         {% endif %}
+
 
       </ul>
       <form class="d-flex">
