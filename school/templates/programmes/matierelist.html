@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+ {% block css %}
+
+{% endblock %}
+
+ {% block content %}
+
+ <h1> List Matiere </h1>
+
+ {% for matiere in niveaux.matiere.all %}
+
+ <a href="#"> {{ matiere.nom }} </a> <br>
+
+ {% endfor %}
+
+{% endblock %}
+
+
+{% block js %}
+
+{% endblock %}

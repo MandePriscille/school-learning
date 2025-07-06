@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+ {% block css %}
+
+{% endblock %}
+
+ {% block content %}
+
+ <h1> List Niveaux </h1>
+
+ {% for niveau in niveaux %}
+
+ <a href="{% url 'programmes:list_matiere' slug=niveau.slug %}"> {{ niveau.nom }} </a> <br>
+
+ {% endfor %}
+
+{% endblock %}
+
+
+{% block js %}
+
+{% endblock %}
