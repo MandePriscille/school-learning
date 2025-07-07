@@ -8,9 +8,9 @@
 
  <h1> List Matiere </h1>
 
- {% for matiere in niveau.matiere.all %}
+ {% for lessons in matieres.lesson.all %}
 
- <a  href="{% url 'programmes:list_lesson' slug=matiere.slug niveau=niveau.slug %}"> {{ lesson.nom }} </a> <br>
+ <a  href="#"> {{ lesson.nom }} </a> <br>
 
  {% endfor %}
 

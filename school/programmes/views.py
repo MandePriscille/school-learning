@@ -13,6 +13,11 @@ class NiveauListView(ListView):
 class MatiereListView(DetailView):
     model = Niveaux
     template_name = 'programmes/matierelist.html'
-    context_object_name = 'niveaux'
+    context_object_name = 'niveau'
 
+
+class LessonListView(DetailView):
+    model = Matiere
+    template_name = 'programmes/lessonlist.html'
+    context_object_name = 'matieres'
 
